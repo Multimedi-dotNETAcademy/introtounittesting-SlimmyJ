@@ -13,7 +13,7 @@ namespace TestNinja.Tests
         }
 
         [Test]
-        public void WhenUserIsNotAdminandReservationMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
+        public void WhenUserIsNotAdminandReservationMadeByUser_CheckifCancelIsPossible_ResultEqualsTrue()
         {
             //ARRANGE
             User _testuser = new User
@@ -35,7 +35,7 @@ namespace TestNinja.Tests
         }
 
         [Test]
-        public void WhenUserIsNotAdminAndReservationNotMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
+        public void WhenUserIsNotAdminAndReservationNotMadeByUser_CheckifCancelIsPossible_ResultEqualsFalse()
         {
             //ARRANGE
             User _testuser = new User
@@ -54,7 +54,7 @@ namespace TestNinja.Tests
         }
 
         [Test]
-        public void WhenUserIsAdminAndReservationNotMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
+        public void WhenUserIsAdminAndReservationNotMadeByUser_CheckifCancelIsPossible_ResultEqualsTrue()
         {
             //ARRANGE
             User _testuser = new User
@@ -73,7 +73,7 @@ namespace TestNinja.Tests
         }
 
         [Test]
-        public void WhenUserIsAdminAndReservationMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
+        public void WhenUserIsAdminAndReservationMadeByUser_CheckifCancelIsPossible_ResultEqualsTrue()
         {
             //ARRANGE
             User _testuser = new User
