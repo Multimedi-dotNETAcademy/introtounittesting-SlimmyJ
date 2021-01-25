@@ -14,8 +14,8 @@ namespace TestNinja.Tests
             testformatter = new HtmlFormatter();
         }
 
-        [TestCase("I am bold", "<strong>I am bold</strong>")]
-        [TestCase("I am bald", "<strong>I am bald</strong>")]
+        [TestCase("Is this in bold", "<strong>Yes this is bold</strong>")]
+        [TestCase("This is also bold", "<strong>I am very bold</strong>")]
         public void HtmlFormatter_WhenCalled_ReturnCode(string input, string expectedResult)
         {
             string result = testformatter.FormatAsBold(input);
