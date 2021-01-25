@@ -90,7 +90,7 @@ namespace TestNinja.Tests
             bool result = _testreservation.CanBeCancelledBy(_testuser);
 
             //ASSERT
-
+            Assert.IsTrue(result); //alternatief
             Assert.AreEqual(true, result);
         }
     }
