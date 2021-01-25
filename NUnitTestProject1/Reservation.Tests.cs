@@ -10,19 +10,21 @@ namespace TestNinja.Tests
         public void SetUp()
 
         {
-            User _testadmin = new User();
-            _testadmin.IsAdmin = true;
         }
 
         [Test]
         public void WhenUserIsNotAdminandReservationMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
         {
             //ARRANGE
-            User _testuser = new User();
-            _testuser.IsAdmin = false;
+            User _testuser = new User
+            {
+                IsAdmin = false
+            };
 
-            Reservation _testreservation = new Reservation();
-            _testreservation.MadeBy = _testuser;
+            Reservation _testreservation = new Reservation
+            {
+                MadeBy = _testuser
+            };
 
             //ACT
             bool result = _testreservation.CanBeCancelledBy(_testuser);
@@ -36,8 +38,10 @@ namespace TestNinja.Tests
         public void WhenUserIsNotAdminAndReservationNotMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
         {
             //ARRANGE
-            User _testuser = new User();
-            _testuser.IsAdmin = false;
+            User _testuser = new User
+            {
+                IsAdmin = false
+            };
 
             Reservation _testreservation = new Reservation();
 
@@ -53,8 +57,10 @@ namespace TestNinja.Tests
         public void WhenUserIsAdminAndReservationNotMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
         {
             //ARRANGE
-            User _testuser = new User();
-            _testuser.IsAdmin = true;
+            User _testuser = new User
+            {
+                IsAdmin = true
+            };
 
             Reservation _testreservation = new Reservation();
 
@@ -70,11 +76,15 @@ namespace TestNinja.Tests
         public void WhenUserIsAdminAndReservationMadeByUser_CheckifCancelIsPossible_ResultEqualsTrueOrFalse()
         {
             //ARRANGE
-            User _testuser = new User();
-            _testuser.IsAdmin = true;
+            User _testuser = new User
+            {
+                IsAdmin = true
+            };
 
-            Reservation _testreservation = new Reservation();
-            _testreservation.MadeBy = _testuser;
+            Reservation _testreservation = new Reservation
+            {
+                MadeBy = _testuser
+            };
 
             //ACT
             bool result = _testreservation.CanBeCancelledBy(_testuser);
