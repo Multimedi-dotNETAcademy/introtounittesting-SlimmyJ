@@ -31,7 +31,7 @@ namespace TestNinja.Tests
 
             //ASSERT
 
-            Assert.AreEqual(result, true);
+            Assert.AreEqual(true, result);
         }
 
         [Test]
@@ -50,7 +50,7 @@ namespace TestNinja.Tests
 
             //ASSERT
 
-            Assert.AreEqual(result, false);
+            Assert.AreEqual(false, result);
         }
 
         [Test]
@@ -69,7 +69,7 @@ namespace TestNinja.Tests
 
             //ASSERT
 
-            Assert.AreEqual(result, true);
+            Assert.AreEqual(true, result);
         }
 
         [Test]
@@ -91,7 +91,7 @@ namespace TestNinja.Tests
 
             //ASSERT
 
-            Assert.AreEqual(result, true);
+            Assert.AreEqual(true, result);
         }
     }
 }
